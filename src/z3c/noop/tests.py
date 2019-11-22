@@ -20,6 +20,7 @@ layer = zope.app.testing.functional.ZCMLLayer(
     pkg_resources.resource_filename(__name__, 'ftesting.zcml'),
     __name__, 'z3c.noop.tests.layer', allow_teardown=True)
 
+
 def test_suite():
     suite = zope.app.testing.functional.FunctionalDocFileSuite(
         'README.txt')
