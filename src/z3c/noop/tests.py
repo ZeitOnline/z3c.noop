@@ -12,7 +12,6 @@
 #
 ##############################################################################
 
-from zope.testing import doctest
 import pkg_resources
 import zope.app.testing.functional
 
