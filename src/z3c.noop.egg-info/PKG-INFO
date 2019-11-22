@@ -1,4 +1,4 @@
-Metadata-Version: 1.0
+Metadata-Version: 2.1
 Name: z3c.noop
 Version: 1.0
 Summary: z3c.noop provides traverser that simply skips a path element, so /foo/++noop++qux/bar is equivalent to /foo/bar.
@@ -27,14 +27,14 @@ Description: ========
         
         .. [#test-setup]
         
-        >>> import zope.traversing.api
-        >>> import zope.publisher.browser
+            >>> import zope.traversing.api
+            >>> import zope.publisher.browser
         
-        >>> root = getRootFolder()
-        >>> request = zope.publisher.browser.TestRequest()
+            >>> root = getRootFolder()
+            >>> request = zope.publisher.browser.TestRequest()
         
-        >>> def traverse(path):
-        ...     return zope.traversing.api.traverse(root, path, request=request)
+            >>> def traverse(path):
+            ...     return zope.traversing.api.traverse(root, path, request=request)
         
         
         =======
@@ -52,3 +52,4 @@ Classifier: License :: OSI Approved :: Zope Public License
 Classifier: Programming Language :: Python
 Classifier: Operating System :: OS Independent
 Classifier: Framework :: Zope3
+Provides-Extra: test

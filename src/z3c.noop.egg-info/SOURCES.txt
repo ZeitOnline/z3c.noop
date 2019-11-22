@@ -1,6 +1,7 @@
 CHANGES.txt
 bootstrap.py
 buildout.cfg
+setup.cfg
 setup.py
 src/z3c/__init__.py
 src/z3c.noop.egg-info/PKG-INFO
