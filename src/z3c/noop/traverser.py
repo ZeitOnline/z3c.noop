@@ -13,11 +13,12 @@
 ##############################################################################
 
 from zope.component import adapts
-from zope.interface import implements, Interface
+from zope.interface import Interface
 import zope.publisher.interfaces.browser
 import zope.traversing.interfaces
 
 
+@zope.interface.implementer(zope.traversing.interfaces.ITraversable)
 class NoOpTraverser(object):
     """This traverser simply skips a path element,
     so /foo/++noop++qux/bar is equivalent to /foo/bar.
@@ -27,7 +28,6 @@ class NoOpTraverser(object):
     """
 
     adapts(Interface,  zope.publisher.interfaces.browser.IDefaultBrowserLayer)
-    implements(zope.traversing.interfaces.ITraversable)
 
     def __init__(self, context, request):
         self.context = context
