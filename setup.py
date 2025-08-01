@@ -1,10 +1,10 @@
 import os
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 
 
 setup(
     name='z3c.noop',
-    version = '1.0+py3.2',
+    version = '1.0+py3.3',
     author='Wolfgang Schnerring',
     author_email='ws@gocept.com',
     description='z3c.noop provides traverser that simply skips a path element, so /foo/++noop++qux/bar is equivalent to /foo/bar.',
@@ -20,11 +20,9 @@ setup(
         'Operating System :: OS Independent',
         'Framework :: Zope3'],
     license='ZPL 2.1',
-    packages=find_packages('src'),
+    packages=find_namespace_packages('src'),
     package_dir = {'': 'src'},
-    namespace_packages=['z3c'],
     install_requires=[
-        'setuptools',
         'zope.component',
         'zope.interface',
         'zope.publisher',
