@@ -12,12 +12,12 @@
 #
 ##############################################################################
 
-import pkg_resources
+import os.path
 import zope.app.testing.functional
 
 
 layer = zope.app.testing.functional.ZCMLLayer(
-    pkg_resources.resource_filename(__name__, 'ftesting.zcml'),
+    os.path.dirname(__file__) + '/ftesting.zcml',
     __name__, 'z3c.noop.tests.layer', allow_teardown=True)
 
 
